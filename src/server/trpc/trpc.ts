@@ -9,11 +9,12 @@ export const t = initTRPC.context<Context>().create({
   },
 });
 
-export const authedProcedure = t.procedure.use(({ ctx, next }) => {
+//export const authedProcedure = t.procedure.use(({ ctx, next }) => {
+export const authedProcedure = t.middleware(({ ctx, next }) => {
   if (!ctx.session || !ctx.session.user) {
     throw new TRPCError({ code: "UNAUTHORIZED" });
   }
-  
+
   return next({
     ctx: {
       ...ctx,
