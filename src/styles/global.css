@@ -1,0 +1,108 @@
+::selection {
+  background-color: var(--laodeaksar-colors-emphasis);
+  color: var(--laodeaksar-colors-brand);
+}
+
+html {
+  font: 112.5%/1.45 var(--fonts-display);
+  overflow-y: scroll;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+@media (max-width: 700px) {
+  html {
+    font: 100%/1.2888 var(--fonts-display);
+  }
+}
+
+/* Custom Scrollbar Colors*/
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--laodeaksar-colors-brand)
+    var(--laodeaksar-colors-emphasis);
+}
+
+/* Works on Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  height: 10px;
+  width: 10px;
+}
+
+*::-webkit-scrollbar-track {
+  background: var(--scrollbar);
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #969db1;
+  border-radius: 20px;
+  border: 3px solid var(--scrollbar);
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background-color: var(--laodeaksar-colors-brand);
+}
+
+body {
+  background: var(--laodeaksar-colors-body);
+  color: var(--laodeaksar-colors-typeface-primary);
+  word-wrap: break-word;
+  text-rendering: optimizeLegibility;
+  margin: 0;
+}
+
+/* TODO Find a way to remove the following */
+/* Patch gif wrapped in figure tag */
+
+figure {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+img,
+video {
+  max-width: 100%;
+  height: auto;
+}
+
+/* END Patch gif wrapped in figure tag */
+
+[hidden],
+[aria-hidden='true'],
+.hidden {
+  display: none;
+}
+
+[aria-hidden='false'] {
+  display: block;
+}
+
+a {
+  text-decoration: none;
+}
+
+/*button {
+  background-color: transparent;
+  background-image: none;
+}
+
+button,
+[type='button'],
+[type='reset'],
+[type='submit'] {
+  -webkit-appearance: none;
+  -webkit-tap-highlight-color: transparent;
+}*/
+
+button,
+[role='button'] {
+  cursor: pointer;
+}
+
+.lock-scroll {
+  overflow: hidden !important;
+}
+
+.isCurrent > a {
+  color: var(--laodeaksar-colors-brand) !important;
+}

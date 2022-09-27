@@ -16,6 +16,15 @@ function defineNextConfig(config) {
 export default defineNextConfig({
   reactStrictMode: true,
   swcMinify: true,
+  images: {
+    domains: [
+      "i.scdn.co", // Spotify Album Art
+      "pbs.twimg.com", // Twitter Images
+      "assets.vercel.com",
+      "images.ctfassets.net",
+      "cdn.sanity.io",
+    ],
+  },
   // Next.js i18n docs: https://nextjs.org/docs/advanced-features/i18n-routing
   i18n: {
     locales: ["en"],
